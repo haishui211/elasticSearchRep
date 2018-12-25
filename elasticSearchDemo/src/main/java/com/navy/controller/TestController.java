@@ -29,7 +29,7 @@ public class TestController {
                     .field("wordCount", map.get("wordCount"))
                     .endObject();
 
-            IndexResponse result = this.transportClient.prepareIndex("title", "novel")
+            IndexResponse result = this.transportClient.prepareIndex("news", "novel")
                     .setSource(content)
                     .get();
             return result;
